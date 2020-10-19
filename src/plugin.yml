@@ -1,0 +1,4 @@
+main: land.pig.plugin.TrashKit.Main
+name: TrashKit
+version: 1
+author: pigland
