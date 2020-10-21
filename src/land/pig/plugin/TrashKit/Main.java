@@ -1,8 +1,10 @@
 package land.pig.plugin.TrashKit;
 
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -18,14 +20,15 @@ public class Main extends JavaPlugin {
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-		if (label.equalsIgnoreCase("hello")) {
+		if (label.equalsIgnoreCase("trashkit")) {
 			if (sender instanceof Player) {
 				Player player = (Player) sender;
-				if (player.hasPermission("hello.use")) {
-					player.sendMessage("Hello player");
-				} else {
-					player.sendMessage("Sorry, you don't have permission");
-				}
+				//if (player.hasPermission("hello.use")) {
+				//}
+					
+				ItemStack items = new ItemStack(Material.GOLDEN_BOOTS);
+				new ItemStack()
+				player.getInventory().addItem(items);
 			} else {
 				sender.sendMessage("Hello console ");
 			}
@@ -34,9 +37,3 @@ public class Main extends JavaPlugin {
 		return false;
 	}
 }
-
-
-// todo -
-// 1. create github team/repo
-// 2. commit on git
-// 3. make a shuffler for the items

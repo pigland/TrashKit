@@ -1,6 +1,7 @@
-main: land.pig.plugin.TrashKit.Main
 name: TrashKit
 version: 1
+description: a plugin for kits
 author: pigland
+main: land.pig.plugin.TrashKit.Main
 commands:
-	hello:
+    trashkit:
